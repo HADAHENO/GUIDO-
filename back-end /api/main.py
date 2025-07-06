@@ -35,10 +35,10 @@ def check_greeting(question):
 # تهيئة الموديلات
 embedding_model = SentenceTransformer("intfloat/multilingual-e5-large")
  
-pc = Pinecone(api_key="pcsk_3ax4D8_PH7vWF1KWAMRpyjmEnXhwxswmHSjvqgwovna3xGGbfsgZsMRtRyFi9uCpPyi4B9")
+pc = Pinecone(api_key="#")
 index = pc.Index("newindex")
  
-genai.configure(api_key="AIzaSyBXtRzMkpm9RNDO09A9N3XoG_vfjgUe5Vw")
+genai.configure(api_key="#")
 model = genai.GenerativeModel("gemini-2.0-flash")
  
 app = Flask(__name__)

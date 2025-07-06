@@ -1,0 +1,359 @@
+{
+  "landing": {
+    "login": "تسجيل الدخول",
+    "register": "عضو جديد",
+    "title": "تمكين رحلتك الأكاديمية",
+    "subtitle": "نساعدك على إطلاق العنان لإمكانياتك الأكاديمية من خلال إرشادات شخصية مدعومة بالذكاء الاصطناعي! سجّل الآن وابدأ التعلم، لا حدود لنجاحك!",
+    "cta": "ما الذي نفعله؟",
+    "heroTitle": "مرحبًا بكم في جايدو: التوجيه الأكاديمي الشخصي واستشارات الكلية",
+    "heroSubtitle": "احصل على دعم خبراء واحد لواحد لرحلتك الأكاديمية، متاح في أي وقت وفي أي مكان.",
+    "getStarted": "ابدأ الآن",
+    "heroImageAlt": "رسم توضيحي للتوجيه الأكاديمي",
+    "missionTitle": "مهمتنا",
+    "missionText": "نحن ملتزمون بتقديم دعم أكاديمي مدعوم بالذكاء الاصطناعي، مما يضمن أن كل طالب لديه الفرصة للنجاح في الدراسة ومتابعة التعليم العالي، وبناء مستقبل أكثر إشراقًا.",
+    "exploreMission": "استكشف مهمتنا",
+    "missionImageAlt": "رسم توضيحي للمهمة",
+    "howItWorksTitle": "كيف يعمل جايدو",
+    "howItWorksText": "تحدث مع روبوت المحادثة الأكاديمي المدعوم بالذكاء الاصطناعي للحصول على دعم فوري، متاح في أي وقت تحتاج إلى مساعدة.",
+    "meetChatbot": "تعرف على روبوت المحادثة الخاص بنا",
+    "howItWorksImageAlt": "رسم توضيحي لكيفية عمل جايدو",
+    "successTitle": "نجاحك الأكاديمي، مبسط",
+    "successText": "ابحر في رحلتك الأكاديمية بثقة. من توصيات الدورات إلى رؤى اللوائح، نحن هنا لمساعدتك على النجاح في كل خطوة على الطريق!",
+    "getStartedNow": "ابدأ الآن",
+    "successImageAlt": "رسم توضيحي للنجاح الأكاديمي"
+  },
+  "login": {
+    "coverAlt": "صورة الخلفية",
+    "logoAlt": "شعار الشركة",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "passwordPlaceholder": "كلمة المرور",
+    "submitButton": "تسجيل الدخول",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "noAccount": "ليس لديك حساب؟",
+    "signUp": "سجل الآن",
+    "errors": {
+      "fillRequired": "الرجاء ملء جميع الحقول المطلوبة",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "الرجاء إدخال بريد إلكتروني صحيح",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "unknownRole": "دور المستخدم غير معروف، يتم التوجيه إلى الصفحة الرئيسية",
+      "loginFailed": "فشل تسجيل الدخول. يرجى التحقق من بيانات الاعتماد الخاصة بك."
+    }
+  },
+  "register": {
+    "coverAlt": "خلفية التسجيل",
+    "logoAlt": "شعار الشركة",
+    "firstNameLabel": "الاسم الأول",
+    "firstNamePlaceholder": "الاسم الأول",
+    "lastNameLabel": "الاسم الأخير",
+    "lastNamePlaceholder": "الاسم الأخير",
+    "emailLabel": "البريد الجامعي",
+    "emailPlaceholder": "البريد الجامعي",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "كلمة المرور",
+    "confirmPasswordLabel": "تأكيد كلمة المرور",
+    "confirmPasswordPlaceholder": "تأكيد كلمة المرور",
+    "submitButton": "تسجيل",
+    "haveAccount": "لديك حساب بالفعل؟",
+    "loginNow": "سجل الدخول الآن",
+    "errors": {
+      "invalidEmailFormat": "الرجاء استخدام صيغة البريد الجامعي الصحيحة: Name_ID@fci.helwan.edu.eg",
+      "registrationFailed": "فشل التسجيل. يرجى المحاولة مرة أخرى لاحقًا.",
+      "passwordMismatch": "كلمات المرور غير متطابقة",
+      "fillRequiredFields": "الرجاء ملء جميع الحقول المطلوبة بشكل صحيح"
+    },
+    "success": {
+      "verificationSent": "تم إرسال بريد التحقق إلى حسابك الجامعي. يرجى التحقق من صندوق الوارد لتفعيل حسابك.",
+      "registrationSuccessful": "تم التسجيل بنجاح"
+    }
+  },
+  "theme": {
+    "light": "التبديل إلى الوضع الفاتح",
+    "dark": "التبديل إلى الوضع الداكن"
+  },
+  "common": {
+    "error": "خطأ",
+    "warning": "تحذير",
+    "code": "الكود",
+    "courseName": "اسم المادة",
+    "hours": "ساعات",
+    "prerequest": "المتطلب السابق",
+    "grade": "الدرجة",
+    "action": "إجراء",
+    "none": "لا يوجد",
+    "add": "إضافة",
+    "added": "تمت الإضافة",
+    "na": "غير متاح",
+    "confirm": "تأكيد"
+  },
+
+  "forgetPassword": {
+  "title": "نسيت كلمة المرور",
+  "emailLabel": "عنوان البريد الإلكتروني",
+  "emailPlaceholder": "أدخل بريدك الإلكتروني",
+  "submitButton": "إرسال رابط إعادة التعيين",
+  "errors": {
+    "invalidEmail": "الرجاء إدخال بريد إلكتروني صحيح",
+    "failedToSend": "فشل إرسال رابط إعادة التعيين. حاول مرة أخرى لاحقًا."
+  },
+  "success": {
+    "resetLinkSent": "تم إرسال رابط إعادة التعيين إلى بريدك الإلكتروني"
+  }
+},
+
+"resetPassword": {
+  "title": "إعادة تعيين كلمة المرور",
+  "newPasswordLabel": "كلمة المرور الجديدة",
+  "newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
+  "confirmPasswordLabel": "تأكيد كلمة المرور الجديدة",
+  "confirmPasswordPlaceholder": "تأكيد كلمة المرور الجديدة",
+  "submitButton": "إعادة تعيين كلمة المرور",
+  "errors": {
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
+    "passwordsNotMatch": "كلمات المرور غير متطابقة",
+    "fillCorrectly": "الرجاء ملء النموذج بشكل صحيح",
+    "resetFailed": "فشل إعادة تعيين كلمة المرور. يرجى المحاولة مرة أخرى."
+  },
+  "success": {
+    "resetSuccessful": "تم إعادة تعيين كلمة المرور بنجاح"
+  }
+},
+
+"header": {
+  "logoAlt": "شعار الشركة",
+  "home": "الرئيسية",
+  "account": "الحساب",
+  "logout": "تسجيل الخروج",
+  "toggleTheme": "تبديل السمة",
+  "lightMode": "الوضع الفاتح",
+  "darkMode": "الوضع الداكن"
+},
+
+"student": {
+  "features": {
+    "lexi": {
+      "name": "التحدث إلى ليكسي",
+      "caption": "ليكسي: مساعدك الذكي، دائماً هنا لمساعدتك."
+    },
+    "courses": {
+      "name": "دوراتي",
+      "caption": "طريقك إلى المعرفة يبدأ هنا معنا."
+    },
+    "transcript": {
+      "name": "السجل الأكاديمي",
+      "caption": "لقطة من تقدمك وإنجازاتك العظيمة."
+    },
+    "pdfQA": {
+    "name": "مساعد PDF",
+    "caption": "قم بتحميل ملفات PDF واحصل على إجابات فورية لأسئلتك."
+  },
+    "roadmap": {
+      "name": "خريطة طريق تفاعلية",
+      "caption": "تابع تقدمك وابقَ على المسار الصحيح بسهولة."
+    },
+    "internships": {
+      "name": "البحث عن تدريبات",
+      "caption": "استكشف فرصًا جديدة، واكتسب الخبرة، وابنِ مستقبلك."
+    },
+    "stress": {
+      "name": "إدارة الإجهاد",
+      "caption": "دليلك لإيجاد السلام وسط الفوضى."
+    }
+  }
+},
+
+"profile": {
+  "labels": {
+    "firstName": "الاسم الأول",
+    "lastName": "الاسم الأخير",
+    "email": "البريد الإلكتروني",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور الجديدة"
+  },
+  "placeholders": {
+    "firstName": "أدخل اسمك الأول",
+    "lastName": "أدخل اسمك الأخير",
+    "email": "أدخل بريدك الإلكتروني",
+    "newPassword": "أدخل كلمة مرور جديدة",
+    "confirmPassword": "أعد إدخال كلمة المرور الجديدة"
+  },
+  "buttons": {
+    "updatePassword": "تحديث كلمة المرور",
+    "updating": "جارٍ التحديث..."
+  },
+  "errors": {
+    "fillAllFields": "الرجاء ملء جميع حقول كلمة المرور",
+    "passwordsNotMatch": "كلمات المرور غير متطابقة",
+    "passwordTooShort": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+    "updateFailed": "فشل تحديث كلمة المرور"
+  },
+  "success": {
+    "passwordUpdated": "تم تحديث كلمة المرور بنجاح"
+  }
+},
+
+
+  "myCourses": {
+    "welcome": "مرحبًا {{ name }}",
+    "subtitle": "تابع تقدمك الأكاديمي ومتطلباتك",
+    "generalRequirements": "المتطلبات العامة",
+    "facultyRequirements": "متطلبات الكلية",
+    "divisionRequirements": "متطلبات القسم",
+    "dashboardTitle": "لوحة التحكم الأكاديمية",
+    "hoursCompleted": "{{ completed }} من {{ total }} ساعة مكتملة",
+    "viewDetails": "عرض التفاصيل",
+    "locked": "مقفل",
+    "illustrationAlt": "رسم توضيحي للتقدم الأكاديمي",
+    "chooseDepartmentTitle": "اختر قسمك",
+    "chooseDepartmentSubtitle": "تهانينا على إكمال المتطلبات الأولية! يرجى اختيار قسم التخصص الخاص بك.",
+    "confirmSelection": "تأكيد الاختيار",
+    "processing": "جارٍ المعالجة...",
+    "selectDepartmentWarning": "يرجى اختيار قسم أولاً",
+    "departmentUpdatedSuccess": "تم تحديث القسم بنجاح!",
+    "departmentUpdateError": "فشل في تحديث القسم. يرجى المحاولة مرة أخرى.",
+     "selectDepartment": "اختر قسمك",
+    "readyToSelectDepartment": "أنت مستعد لاختيار تخصصك",
+    "selectNow": "اختر الآن",
+    "selectDepartmentFirst": "الرجاء اختيار القسم أولاً",
+    "completeFacultyFirst": "يجب إتمام 66 ساعة أولاً"
+  },
+
+  "myGeneral": {
+    "compulsorySubjects": "المواد الإجبارية",
+    "electiveSubjects": "المواد الاختيارية",
+    "totalHours": "إجمالي الساعات",
+    "selectGrade": "اختر درجة لـ {{courseName}}",
+    "selectGradeWarning": "الرجاء اختيار درجة قبل إضافة المادة",
+    "prerequisiteError": "لا يمكنك إضافة هذه المادة بسبب عدم استيفاء المتطلبات المسبقة",
+    "missingCodeError": "رمز المادة مفقود",
+    "updateWarning": "تم تحديث المادة ولكن يرجى التحقق من البيانات لـ {{courseName}}",
+    "addError": "فشل في إضافة المادة {{courseName}}"
+  },
+
+  
+    "courses": {
+      "failedToLoad": "فشل تحميل المواد الدراسية",
+      "coreLoaded": "تم تحميل المواد الإجبارية بنجاح",
+      "failedLoadCore": "فشل تحميل المواد الإجبارية",
+      "electiveLoaded": "تم تحميل المواد الاختيارية بنجاح",
+      "failedLoadElective": "فشل تحميل المواد الاختيارية",
+      "noCourseProvided": "لم يتم تقديم مادة للتحديث",
+      "invalidCourseData": "بيانات المادة غير صالحة",
+      "updateSuccess": "تم إضافة المادة بنجاح",
+      "updateWarning": "تم التحديث مع تحذيرات: {{message}}",
+      "updateFailed": "فشل تحديث المادة",
+      "invalidResponse": "رد غير صالح من الخادم",
+      "failedLoadHours": "فشل تحميل إجمالي الساعات",
+      "invalidDepartment": "قسم غير صالح تم اختياره",
+      "departmentUpdated": "تم تحديث القسم بنجاح",
+      "departmentUpdateFailed": "فشل تحديث القسم"
+    },
+
+    "faculty": {
+      "compulsorySubjects": "المواد الإجبارية",
+      "electiveSubjects": "المواد الاختيارية",
+      "totalHours": "إجمالي الساعات",
+      "selectGradeWarning": "الرجاء اختيار درجة قبل إضافة المادة",
+      "prerequisiteError": "لا يمكنك إضافة هذه المادة بسبب عدم استيفاء المتطلبات المسبقة",
+      "missingCodeError": "رمز المادة مفقود",
+      "courseAdded": "تمت إضافة المادة {{courseName}} بنجاح",
+      "updateWarning": "تم تحديث المادة ولكن يرجى التحقق من البيانات لـ {{courseName}}",
+      "addError": "فشل إضافة المادة {{courseName}}",
+      "failedLoadCore": "فشل تحميل المواد الإجبارية",
+      "failedLoadElective": "فشل تحميل المواد الاختيارية",
+      "selectGrade": "اختر درجة لـ {{courseName}}"
+    },
+
+    "department": {
+      "selectDepartment": "اختر قسمك",
+      "departmentLabel": "القسم",
+      "selectPlaceholder": "اختر قسمك",
+      "csOption": "علوم الحاسب (CS)",
+      "isOption": "نظم المعلومات (IS)",
+      "aiOption": "الذكاء الاصطناعي (AI)",
+      "itOption": "تكنولوجيا المعلومات (IT)",
+      "compulsorySubjects": "المواد الإجبارية",
+      "electiveSubjects": "المواد الاختيارية",
+      "totalHours": "إجمالي الساعات",
+      "selectGradeWarning": "الرجاء اختيار درجة قبل إضافة المادة",
+      "prerequisiteError": "لا يمكنك إضافة هذه المادة بسبب عدم استيفاء المتطلبات المسبقة",
+      "missingCodeError": "رمز المادة مفقود",
+      "courseAdded": "تمت إضافة المادة {{courseName}} بنجاح",
+      "updateWarning": "تم تحديث المادة ولكن يرجى التحقق من البيانات لـ {{courseName}}",
+      "addError": "فشل إضافة المادة {{courseName}}",
+      "failedLoadCore": "فشل تحميل المواد الإجبارية",
+      "failedLoadElective": "فشل تحميل المواد الاختيارية",
+      "selectGrade": "اختر درجة لـ {{courseName}}",
+      "selectDepartmentWarning": "الرجاء اختيار قسم",
+      "invalidDepartment": "قسم غير صالح",
+      "updateError": "فشل تحديث القسم",
+      "updateSuccess":"تم تعديل القسم بنجاح"
+    },
+
+    
+  "transcript": {
+    "title": "كشف الدرجات",
+    "studentName": "اسم الطالب",
+    "gpa": "المعدل التراكمي",
+    "cumulativeGrade": "التقدير العام",
+    "completedHours": "إجمالي الساعات المكتملة",
+    "department": "القسم",
+    "loading": "جاري تحميل كشف الدرجات...",
+    "loadError": "فشل تحميل بيانات كشف الدرجات",
+    "grades": {
+      "excellent": "ممتاز",
+      "veryGood": "جيد جدًا",
+      "good": "جيد",
+      "acceptable": "مقبول",
+      "weak": "ضعيف",
+      "veryWeak": "ضعيف جدًا"
+    }
+  },
+  
+ "chatbot": {
+    "welcome_message": "مرحبًا! كيف يمكنني مساعدتك الآن",
+    "error_message": "عذرا، أنا هنا فقط للإجابة على الأسئلة المتعلقة بالكلية.",
+    "default_response": "لست متأكدًا كيف أرد على ذلك. هل يمكنك إعادة صياغة سؤالك؟",
+    "you": "أنت",
+    "assistant": "ليكسى",
+    "copy": "نسخ",
+    "placeholder": "اكتب رسالتك هنا...",
+    "textarea": {
+      "hint": "اضغط Enter للإرسال، Shift+Enter لسطر جديد"
+    },
+    "send": "إرسال",
+    "disclaimer": "قد يقدم المساعد الذكي معلومات غير دقيقة عن الأشخاص أو الأماكن أو الحقائق.",
+    "chat_history": "سجل المحادثات",
+    "new_chat": "محادثة جديدة",
+    "loading_history": "جاري تحميل سجل المحادثات...",
+    "no_chat_history": "لا يوجد سجل محادثات متاح",
+    "chat_number": "المحادثة {{number}}",
+    "chat": "محادثاتك السابقة"
+  },
+"chatpdf": {
+    "uploadTitle": "رفع ملف PDF الخاص بك",
+    "uploadSubtitle": "حدد ملف PDF لبدء الدردشة مع مستندك.",
+    "chooseFile": "اختر ملف",
+    "uploadButton": "رفع ملف PDF",
+    "uploading": "جاري الرفع...",
+    "uploadSuccess": "تم رفع ملف PDF بنجاح!",
+    "newChatWelcome": "مرحبًا بك في جلسة الدردشة الجديدة مع ملف PDF!",
+    "askPlaceholder": "اطرح سؤالاً حول ملف PDF...",
+    "sendButton": "إرسال",
+    "noChatIdError": "لا توجد جلسة دردشة متاحة",
+    "noFileError": "الرجاء اختيار ملف أولاً",
+    "fileTypeError": "الرجاء اختيار ملف PDF",
+    "fileSizeError": "يجب ألا يتجاوز حجم الملف 10 ميجابايت",
+    "questionError": "الرجاء إدخال سؤال",
+    "botThinking": "المساعد يفكر...",
+    "pdfChatAssistant": "مساعد الدردشة مع PDF",
+    "hideUpload": "إخفاء الرفع",
+    "showUpload": "عرض الرفع",
+    "welcomeMessage": "قم برفع ملف PDF لبدء طرح الأسئلة حول محتواه."
+}
+
+
+
+  
+}

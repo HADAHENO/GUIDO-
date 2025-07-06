@@ -1,0 +1,365 @@
+{
+  "landing": {
+    "login": "Login",
+    "register": "Register",
+    "title": "Empowering Your Academic Journey",
+    "subtitle": "We help you unlock your academic potential with personalized AI-driven guidance! Just sign up and start learning, no limits to your success!",
+    "cta": "What We Do?",
+    "heroTitle": "Welcome to Guido: Personalized Academic Guidance & College Counseling",
+    "heroSubtitle": "Receive expert, 1-on-1 support for your academic journey, available anytime, anywhere.",
+    "getStarted": "Get Started",
+    "heroImageAlt": "Academic guidance illustration",
+    "missionTitle": "Our Mission",
+    "missionText": "We are dedicated to providing accessible, AI-powered academic support, ensuring that every student has the opportunity to succeed in high school, pursue higher education, and build a brighter future.",
+    "exploreMission": "Explore Our Mission",
+    "missionImageAlt": "Mission illustration",
+    "howItWorksTitle": "How Guido Works",
+    "howItWorksText": "Chat with our AI-powered academic chatbot for instant support, available anytime you need help.",
+    "meetChatbot": "Meet Our AI Chatbot",
+    "howItWorksImageAlt": "How Guido works illustration",
+    "successTitle": "Your Academic Success, Simplified",
+    "successText": "Navigate your academic journey with confidence. From course recommendations to regulation insights, we're here to help you succeed every step of the way!",
+    "getStartedNow": "Get Started Now",
+    "successImageAlt": "Academic success illustration"
+  },
+  "login": {
+    "coverAlt": "Background image",
+    "logoAlt": "Company logo",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "submitButton": "LOGIN",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up Now",
+    "errors": {
+      "fillRequired": "Please fill all required fields",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "passwordRequired": "Password is required",
+      "unknownRole": "Unknown user role, redirecting to home",
+      "loginFailed": "Login failed. Please check your credentials."
+    }
+  },
+  "register": {
+    "coverAlt": "Registration background",
+    "logoAlt": "Company logo",
+    "firstNameLabel": "First name",
+    "firstNamePlaceholder": "First Name",
+    "lastNameLabel": "Last name",
+    "lastNamePlaceholder": "Last Name",
+    "emailLabel": "University email",
+    "emailPlaceholder": "University Email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "confirmPasswordLabel": "Confirm password",
+    "confirmPasswordPlaceholder": "Confirm Password",
+    "submitButton": "Register",
+    "haveAccount": "Already have an account?",
+    "loginNow": "Login Now",
+    "errors": {
+      "invalidEmailFormat": "Please use a valid university email format: Name_ID@fci.helwan.edu.eg",
+      "registrationFailed": "Registration failed. Please try again later.",
+      "passwordMismatch": "Passwords don't match",
+      "fillRequiredFields": "Please fill in all required fields correctly"
+    },
+    "success": {
+      "verificationSent": "A verification email has been sent to your university account. Please check your inbox to activate your account.",
+      "registrationSuccessful": "Registration Successful"
+    }
+  },
+  "theme": {
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
+  },
+  "common": {
+    "error": "Error",
+    "warning": "Warning",
+    "code": "Code",
+    "courseName": "Course Name",
+    "hours": "hours",
+    "prerequest": "PreRequest",
+    "grade": "Grade",
+    "action": "Action",
+    "none": "None",
+    "add": "Add",
+    "added": "Added",
+    "na": "N/A",
+    "confirm": "Confirm" 
+  },
+
+  "forgetPassword": {
+  "title": "FORGOT PASSWORD",
+  "emailLabel": "Email address",
+  "emailPlaceholder": "Enter your email",
+  "submitButton": "Send Reset Link",
+  "errors": {
+    "invalidEmail": "Please enter a valid email",
+    "failedToSend": "Failed to send reset link. Try again later."
+  },
+  "success": {
+    "resetLinkSent": "Reset link sent to your email"
+  }
+},
+
+"resetPassword": {
+  "title": "RESET PASSWORD",
+  "newPasswordLabel": "New password",
+  "newPasswordPlaceholder": "Enter new password",
+  "confirmPasswordLabel": "Confirm new password",
+  "confirmPasswordPlaceholder": "Confirm new password",
+  "submitButton": "Reset Password",
+  "errors": {
+    "passwordRequired": "Password is required",
+    "confirmPasswordRequired": "Password confirmation is required",
+    "passwordsNotMatch": "Passwords do not match",
+    "fillCorrectly": "Please fill out the form correctly",
+    "resetFailed": "Failed to reset password. Please try again."
+  },
+  "success": {
+    "resetSuccessful": "Password has been reset successfully"
+  }
+},
+
+"header": {
+  "logoAlt": "Company Logo",
+  "home": "Home",
+  "account": "Account",
+  "logout": "Logout",
+  "toggleTheme": "Toggle Theme",
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode"
+},
+
+"student": {
+  "features": {
+    "lexi": {
+      "name": "Talk To Lexi",
+      "caption": "Lexi: Your intelligent assistant, always here to help."
+    },
+    "courses": {
+      "name": "My Courses",
+      "caption": "Your path to knowledge begins right here with us."
+    },
+    "transcript": {
+      "name": "Transcript",
+      "caption": "A snapshot of your progress and great achievements."
+    },
+    "pdfQA": {
+    "name": "PDF Assistant",
+    "caption": "Upload PDFs and get instant answers to your questions."
+  },
+    "roadmap": {
+      "name": "Interactive Roadmap",
+      "caption": "Monitor your progress and stay on track effortlessly."
+    },
+    "internships": {
+      "name": "Search For Internships",
+      "caption": "Explore new opportunities, gain experience, and build."
+    },
+    "stress": {
+      "name": "Stress Management",
+      "caption": "Your guide to finding peace amidst the chaos."
+    }
+  }
+},
+
+"profile": {
+  "labels": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password"
+  },
+  "placeholders": {
+    "firstName": "Enter your first name",
+    "lastName": "Enter your last name",
+    "email": "Enter your email address",
+    "newPassword": "Enter a new password",
+    "confirmPassword": "Re-enter your new password"
+  },
+  "buttons": {
+    "updatePassword": "Update Password",
+    "updating": "Updating..."
+  },
+  "errors": {
+    "fillAllFields": "Please fill in all password fields",
+    "passwordsNotMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 8 characters long",
+    "updateFailed": "Failed to update password"
+  },
+  "success": {
+    "passwordUpdated": "Password updated successfully"
+  }
+},
+
+
+  "myCourses": {
+    "welcome": "Welcome, {{ name }}",
+    "subtitle": "Track your academic progress and requirements",
+    "generalRequirements": "General Requirements",
+    "facultyRequirements": "Faculty Requirements",
+    "divisionRequirements": "Department Requirements",
+    "dashboardTitle": "Academic Dashboard",
+    "hoursCompleted": "{{ completed }} of {{ total }} hours completed",
+    "completeFacultyFirst": "Complete the required hours first.",
+    "viewDetails": "View Details",
+    "locked": "Locked",
+    "illustrationAlt": "Academic progress illustration",
+     "chooseDepartmentTitle": "Choose Your Department",
+    "chooseDepartmentSubtitle": "Congratulations on completing the initial requirements! Please select your specialization department.",
+    "confirmSelection": "Confirm Selection",
+    "processing": "Processing...",
+    "selectDepartmentWarning": "Please select a department first",
+    "departmentUpdatedSuccess": "Department updated successfully!",
+    "departmentUpdateError": "Failed to update department. Please try again.",
+    "selectDepartment": "Select Your Department",
+    "readyToSelectDepartment": "You're ready to select your specialization department",
+    "selectNow": "Select Now",
+    "selectDepartmentFirst": "Please select your department first"
+  
+},
+
+"myGeneral": {
+    "compulsorySubjects": "Compulsory Subjects",
+    "electiveSubjects": "Elective Subjects",
+    "totalHours": "Total Hours",
+    "selectGrade": "Select grade for {{courseName}}",
+    "selectGradeWarning": "Please select a grade before adding the course",
+    "prerequisiteError": "You cannot add this course due to unmet prerequisites",
+    "missingCodeError": "Course code is missing",
+    "updateWarning": "Course update completed but verify data for {{courseName}}",
+    "addError": "Failed to add course {{courseName}}"
+  },
+
+  
+    "courses": {
+      "failedToLoad": "Failed to load courses",
+      "coreLoaded": "Core courses loaded successfully",
+      "failedLoadCore": "Failed to load core courses",
+      "electiveLoaded": "Elective courses loaded successfully",
+      "failedLoadElective": "Failed to load elective courses",
+      "noCourseProvided": "No course provided for update",
+      "invalidCourseData": "Invalid course data provided",
+      "updateSuccess": "Course Added successfully",
+      "updateWarning": "Update completed with warnings: {{message}}",
+      "updateFailed": "Failed to update course",
+      "invalidResponse": "Received invalid response from server",
+      "failedLoadHours": "Failed to load total hours",
+      "invalidDepartment": "Invalid department selected",
+      "departmentUpdated": "Department updated successfully",
+      "departmentUpdateFailed": "Failed to update department"
+    },
+
+    "faculty": {
+      "compulsorySubjects": "Compulsory Subjects",
+      "electiveSubjects": "Elective Subjects",
+      "totalHours": "Total Hours",
+      "selectGradeWarning": "Please select a grade before adding the course",
+      "prerequisiteError": "You cannot add this course due to unmet prerequisites",
+      "missingCodeError": "Course code is missing",
+      "courseAdded": "Course {{courseName}} added successfully",
+      "updateWarning": "Course update completed but verify data for {{courseName}}",
+      "addError": "Failed to add course {{courseName}}",
+      "failedLoadCore": "Failed to load core courses",
+      "failedLoadElective": "Failed to load elective courses",
+      "selectGrade": "Select grade for {{courseName}}"
+    },
+
+    "department": {
+      "selectDepartment": "Select Your Department",
+      "departmentLabel": "Department",
+      "selectPlaceholder": "Select your department",
+      "csOption": "Computer Science (CS)",
+      "isOption": "Information Systems (IS)",
+      "aiOption": "Artificial Intelligence (AI)",
+      "itOption": "Information Technology (IT)",
+      "compulsorySubjects": "Compulsory Subjects",
+      "electiveSubjects": "Elective Subjects",
+      "totalHours": "Total Hours",
+      "selectGradeWarning": "Please select a grade before adding the course",
+      "prerequisiteError": "You cannot add this course due to unmet prerequisites",
+      "missingCodeError": "Course code is missing",
+      "courseAdded": "Course {{courseName}} added successfully",
+      "updateWarning": "Course update completed but verify data for {{courseName}}",
+      "addError": "Failed to add course {{courseName}}",
+      "failedLoadCore": "Failed to load core courses",
+      "failedLoadElective": "Failed to load elective courses",
+      "selectGrade": "Select grade for {{courseName}}",
+      "selectDepartmentWarning": "Please select a department",
+      "invalidDepartment": "Invalid department selected",
+      "updateError": "Failed to update department"
+    
+    },
+
+    "transcript": {
+      "title": "STUDENT TRANSCRIPT",
+      "studentName": "Student Name",
+      "gpa": "GPA",
+      "cumulativeGrade": "Cumulative Grade",
+      "completedHours": "Total Completed Hours",
+      "department": "Department",
+      "loading": "Loading transcript...",
+      "loadError": "Failed to load transcript data",
+      "grades": {
+        "excellent": "Excellent",
+        "veryGood": "Very Good",
+        "good": "Good",
+        "acceptable": "Acceptable",
+        "weak": "Weak",
+        "veryWeak": "Very Weak"
+      }
+    },
+
+ "chatbot": {
+    "welcome_message": "Hello! How can I help you Now?",
+    "error_message": "Sorry, I am only here to answer questions about college. ",
+    "default_response": "I'm not sure how to respond to that. Could you rephrase your question?",
+    "you": "You",
+    "assistant": "LEXI",
+    "copy": "Copy",
+    "placeholder": "Type your message here...",
+    "textarea": {
+      "hint": "Press Enter to send, Shift+Enter for a new line"
+    },
+    "send": "Send",
+    "disclaimer": "AI assistant may produce inaccurate information about people, places, or facts.",
+    "chat_history": "Chat History",
+    "new_chat": "New Chat",
+    "loading_history": "Loading chat history...",
+    "no_chat_history": "No chat history available",
+    "chat_number": "Chat {{number}}",
+    "chat": "Chats History"
+  },
+
+   "chatpdf": {
+    "uploadTitle": "Upload Your PDF",
+    "uploadSubtitle": "Select a PDF file to start chatting with your document.",
+    "chooseFile": "Choose File",
+    "uploadButton": "Upload PDF",
+    "uploading": "Uploading...",
+    "uploadSuccess": "PDF uploaded successfully!",
+    "newChatWelcome": "Welcome to your new PDF chat session!",
+    "askPlaceholder": "Ask a question about the PDF...",
+    "sendButton": "Send",
+    "noChatIdError": "No chat session available",
+    "noFileError": "Please select a file first",
+    "fileTypeError": "Please select a PDF file",
+    "fileSizeError": "File size should not exceed 10MB",
+    "questionError": "Please enter a question",
+    "botThinking": "The assistant is thinking...",
+    "pdfChatAssistant": "PDF Chat Assistant",
+    "hideUpload": "Hide Upload",
+    "showUpload": "Show Upload",
+    "welcomeMessage": "Upload a PDF file to start asking questions about its content."
+}
+
+   
+ 
+
+
+ 
+  
+
+
+}

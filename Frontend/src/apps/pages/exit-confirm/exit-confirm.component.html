@@ -1,0 +1,10 @@
+<div class="exit-dialog" *ngIf="showExitDialog">
+  <div class="dialog-content">
+    <h3>Exit App?</h3>
+    <p>Are you sure you want to exit?</p>
+    <div class="buttons">
+      <button (click)="cancelExit()">Cancel</button>
+      <button (click)="confirmExit()">Exit</button>
+    </div>
+  </div>
+</div>

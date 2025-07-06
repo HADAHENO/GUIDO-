@@ -1,0 +1,39 @@
+<div class="courses-page">
+    <app-student-header></app-student-header>
+    <div class="navbar-spacer"></div>
+
+    <div class="transcript-content">
+      <div *ngIf="isLoading" class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i> {{ 'transcript.loading' | transloco }}
+      </div>
+
+      <div *ngIf="!isLoading" class="student-details">
+        <h2>{{ 'transcript.title' | transloco }}</h2>
+
+        <div class="detail-row">
+          <span class="detail-label">{{ 'transcript.studentName' | transloco }}:</span>
+          <span class="detail-value">{{ student?.firstName }} {{ student?.lastName }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">{{ 'transcript.gpa' | transloco }}:</span>
+          <span class="detail-value">{{ transcriptData?.gpa?.toFixed(2) || student?.gpa?.toFixed(2) || ('common.na' | transloco) }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">{{ 'transcript.cumulativeGrade' | transloco }}:</span>
+          <span class="detail-value">{{ getCumulativeGrade() }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">{{ 'transcript.completedHours' | transloco }}:</span>
+          <span class="detail-value">{{ transcriptData?.totalHours || student?.completedHours || ('common.na' | transloco) }}</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">{{ 'transcript.department' | transloco }}:</span>
+          <span class="detail-value">{{ getDepartmentName() }}</span>
+        </div>
+      </div>
+    </div>
+</div>

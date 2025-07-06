@@ -1,0 +1,39 @@
+<div class="navbar" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <div class="logo-container">
+        <img src="assets/logo3.png" alt="" class="logo-image" routerLink="/student-page" />
+    </div>
+
+    <div class="top-nav-items">
+        <!-- Single language toggle button -->
+        <button class="lang-switcher" (click)="toggleLanguage()" [title]="'header.toggleLanguage' | transloco">
+            {{ currentLang === 'en' ? 'عربي' : 'EN' }}
+        </button>
+        
+        <a class="dark-mode-toggle" (click)="toggleTheme()" [title]="'header.toggleTheme' | transloco">
+            <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+        </a>
+    </div>
+  
+    <ul class="nav-links">
+        <li>
+            <a routerLink="/student-page" [title]="'header.home' | transloco">
+                <i class="fas fa-home"></i>
+                <span class="nav-text">{{ 'header.home' | transloco }}</span>
+            </a>
+        </li>
+        
+        <li class="menu-container">
+            <a [title]="'header.account' | transloco" routerLink="/profile">
+                <i class="fas fa-user-circle"></i>
+                <span class="nav-text">{{ student.firstName | titlecase }}</span>
+            </a>
+        </li>
+
+        <li>
+            <a (click)="logout()" [title]="'header.logout' | transloco">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-text">{{ 'header.logout' | transloco }}</span>
+            </a>
+        </li>
+    </ul>
+</div>

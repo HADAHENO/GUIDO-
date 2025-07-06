@@ -1,0 +1,178 @@
+<div class="chatbot-fullpage" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'" [class.dark-mode]="isDarkMode">
+  
+  <app-student-header></app-student-header>
+
+  <div class="history-overlay" 
+        *ngIf="isHistoryOpen" 
+        (click)="closeHistory($event)"></div>
+
+<aside #historySidebar class="history-sidebar" [class.open]="isHistoryOpen">
+  <div class="sidebar-header">
+    <div class="header-top">
+      <h2>{{ 'chatbot.chat_history' | transloco }}</h2>
+      <button
+        *ngIf="isHistoryOpen"
+        class="history-close-btn"
+        (click)="toggleHistory()"
+        title="{{ 'chatbot.close_history' | transloco }}"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <button class="new-chat-btn" (click)="createNewChat()">
+      <span>+</span> {{ 'chatbot.new_chat' | transloco }}
+    </button>
+  </div>
+  <div class="history-list">
+    <div *ngIf="isHistoryLoading" class="loading-history">
+      <div class="loading-spinner"></div>
+      <span>{{ 'chatbot.loading_history' | transloco }}</span>
+    </div>
+    <div *ngIf="!isHistoryLoading && chatHistory.length === 0" class="empty-history">
+      <p>{{ 'chatbot.no_chat_history' | transloco }}</p>
+    </div>
+    <div 
+      *ngFor="let chat of chatHistory" 
+      class="history-item" 
+      [class.active]="chat.id === selectedChatId" 
+      (click)="selectChat(chat.id)">
+      <div class="item-content">
+        <h3 class="item-title">{{ formatChatTitle(chat.title) }}</h3>
+        <div class="item-footer">
+          <span class="item-time">{{ chat.timestamp | date:'shortTime' }}</span>
+          <span *ngIf="chat.unreadCount && chat.unreadCount > 0" class="unread-count">{{ chat.unreadCount }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main class="chat-main" [class.history-open]="isHistoryOpen">
+    <div class="chat-header">
+      <button 
+        class="history-toggle" 
+        type="button" 
+        aria-label="Toggle history" 
+        (click)="toggleHistory()"
+        *ngIf="!isHistoryOpen" 
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <!-- <h1 *ngIf="!isHistoryOpen">{{ selectedChatId ? ('chatbot.chat' | transloco) : ('chatbot.newChat' | transloco) }}</h1> -->
+    </div>
+    
+    <div #messagesContainer class="messages-container">
+      <div *ngFor="let message of messages" class="message" [class.user]="message.sender === 'user'" [class.bot]="message.sender === 'bot'">
+        <div class="message-content">
+          <div class="message-sender">
+            <span class="sender-icon" [class.user-icon]="message.sender === 'user'" [class.bot-icon]="message.sender === 'bot'">
+              {{ message.sender === 'user' ? '👤' : '🤖' }}
+            </span>
+            <span class="sender-name">
+              {{ message.sender === 'user' ? ('chatbot.you' | transloco) : ('chatbot.assistant' | transloco) }}
+            </span>
+            <span class="message-time">{{ formatTime(message.timestamp) }}</span>
+          </div>
+          <div class="message-text" [class.code-block]="message.isCode">
+            <pre *ngIf="message.isCode">{{ message.text }}</pre>
+            <div *ngIf="!message.isCode && !message.isThinking">
+              {{ message.text.startsWith('chatbot.') ? (message.text | transloco) : message.text }}
+            </div>
+            <div *ngIf="message.isThinking" class="typing-indicator">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <button 
+              *ngIf="message.sender === 'bot' && !message.isThinking"
+              type="button"
+              class="copy-button" 
+              (click)="copyToClipboard(message.text, $event)"
+              [title]="'chatbot.copy' | transloco"
+              [attr.aria-label]="'chatbot.copy' | transloco"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="visually-hidden">{{ 'chatbot.copy' | transloco }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="chat-footer" [class.history-open]="isHistoryOpen">
+    <div class="input-container">
+      <div class="textarea-wrapper">
+        <label for="userInput" class="sr-only">
+          {{ 'chatbot.placeholder' | transloco }}
+        </label>
+        <textarea
+          id="userInput"
+          [(ngModel)]="userInput"
+          (keydown.enter)="!isLoading && sendMessage()"
+          [placeholder]="'chatbot.placeholder' | transloco"
+          [disabled]="isLoading"
+          [attr.aria-label]="'chatbot.placeholder' | transloco"
+          [title]="'chatbot.placeholder' | transloco"
+          rows="1"
+          aria-describedby="textareaHint"
+        ></textarea>
+        <span id="textareaHint" class="sr-only">
+          {{ 'chatbot.textarea.hint' | transloco }}
+        </span>
+      </div>
+
+      <button 
+        type="button"
+        class="send-button" 
+        (click)="sendMessage()" 
+        [disabled]="!userInput.trim() || isLoading"
+        [title]="'chatbot.send' | transloco"
+        [attr.aria-label]="'chatbot.send' | transloco"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+        <span class="visually-hidden">{{ 'chatbot.send' | transloco }}</span>
+      </button>
+    </div>
+    <div class="disclaimer">{{ 'chatbot.disclaimer' | transloco }}</div>
+  </footer>
+</div>

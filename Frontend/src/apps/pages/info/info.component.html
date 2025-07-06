@@ -1,0 +1,85 @@
+<div class="landing-page" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <header class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo3.png" 
+             [alt]="'landing.logoAlt' | transloco" 
+             alt="Company logo"  
+             class="logo-image" 
+             routerLink="/">
+      </div>
+      
+      <div class="language-switcher">
+        <!-- <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'">EN</button>
+        <span class="separator">|</span>
+        <button (click)="switchLanguage('ar')" [class.active]="currentLang === 'ar'">عربي</button> -->
+        <!-- <button class="theme-toggle-button" (click)="toggleTheme()" aria-label="Toggle dark mode">
+            <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+          </button> -->
+      </div>
+      
+      <div class="right-button">
+        <button routerLink="/login">{{ 'landing.login' | transloco }}</button>
+        <button routerLink="/registerStudent">{{ 'landing.register' | transloco }}</button>
+      </div>
+    </header>
+  
+    <div class="navbar-spacer"></div>
+  
+    <!-- Volunteer Section with full-width background -->
+    <div class="volunteer-background">
+      <div class="volunteer-container full-width section fade-in">
+        <div class="text-section">
+          <h1>{{ 'landing.heroTitle' | transloco }}</h1>
+          <p>{{ 'landing.heroSubtitle' | transloco }}</p>
+          <button class="help-button" routerLink="/login">{{ 'landing.getStarted' | transloco }}</button>
+        </div>
+  
+        <div class="image-section">
+          <img src="assets/xx.png" [alt]="'landing.doctorConsultation' | transloco" alt="Doctor consultation illustration">
+        </div>
+      </div>
+    </div>
+  
+    <div class="mission-section full-width section zoom-in">
+      <div class="mission-container">
+        <div class="image-section">
+          <img src="assets/mission-15.png" alt="" aria-hidden="true" />
+        </div>
+  
+        <div class="text-section">
+          <h2>{{ 'landing.missionTitle' | transloco }}</h2>
+          <p>{{ 'landing.missionText' | transloco }}</p>
+          <button class="help-button" routerLink="/login">{{ 'landing.exploreMission' | transloco }}</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Volunteer Section with full-width background -->
+    <div class="volunteer-background">
+      <div class="volunteer-container full-width section fade-in">
+        <div class="text-section">
+          <h1>{{ 'landing.howItWorksTitle' | transloco }}</h1>
+          <h3>{{ 'landing.howItWorksText' | transloco }}</h3>
+          <!-- <p>{{ 'landing.howItWorksText' | transloco }}</p> -->
+          <button class="help-button" routerLink="/login">{{ 'landing.meetChatbot' | transloco }}</button>
+        </div>
+  
+        <div class="image-section">
+          <img src="assets/cc.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+  
+    <div class="mission-section full-width section zoom-in">
+      <div class="image-section">
+        <img src="assets/vv.png" alt="" aria-hidden="true">
+      </div>
+  
+      <div class="text-section">
+        <h1>{{ 'landing.successTitle' | transloco }}</h1>
+        <h3>{{ 'landing.successText' | transloco }}</h3>
+        <!-- <p>{{ 'landing.manageAppointmentsText' | transloco }}</p> -->
+        <button class="help-button" routerLink="/login">{{ 'landing.getStartedNow' | transloco }}</button>
+      </div>
+    </div>
+  </div>

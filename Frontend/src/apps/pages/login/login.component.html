@@ -1,0 +1,68 @@
+<div class="bg-img" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <div class="overlay"></div>
+    <div class="cover-image">
+        <img src="assets/bg.jpg" alt="" role="presentation" class="full-cover">
+    </div>
+  
+    <div class="navbar-spacer"></div>
+  
+    <div class="content">
+        <img src="assets/logo1.png" alt="" class="logo" routerLink="/" />
+      
+      
+  
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div class="field">
+            <label for="email" class="sr-only">{{ 'login.emailLabel' | transloco }}</label>
+            <span class="fa fa-user"></span>
+            <input 
+              id="email"
+              type="email" 
+              formControlName="email" 
+              [placeholder]="'login.emailPlaceholder' | transloco"
+              [attr.aria-label]="'login.emailLabel' | transloco"
+              required
+            />
+            <div *ngIf="isSubmitted && fc['email'].errors?.['required']" class="error">
+              {{ 'login.errors.emailRequired' | transloco }}
+            </div>
+            <div *ngIf="isSubmitted && fc['email'].errors?.['email']" class="error">
+              {{ 'login.errors.emailInvalid' | transloco }}
+            </div>
+          </div>
+          
+          <div class="field space">
+            <label for="password" class="sr-only">{{ 'login.passwordLabel' | transloco }}</label>
+            <span class="fa fa-lock"></span>
+            <input
+              id="password"
+              type="password"
+              formControlName="password"
+              class="pass-key"
+              [placeholder]="'login.passwordPlaceholder' | transloco"
+              [attr.aria-label]="'login.passwordLabel' | transloco"
+              required
+            />
+            <div *ngIf="isSubmitted && fc['password'].errors?.['required']" class="error">
+              {{ 'login.errors.passwordRequired' | transloco }}
+            </div>
+          </div>
+  
+        <div class="field">
+          <input 
+            type="submit" 
+            [value]="'login.submitButton' | transloco"
+            [disabled]="loginForm.invalid && isSubmitted" 
+          />
+        </div>
+  
+        <div class="forgot-password">
+          <a routerLink="/forget-password">{{ 'login.forgotPassword' | transloco }}</a>
+        </div>
+      </form>
+  
+      <div class="signup">
+        {{ 'login.noAccount' | transloco }} <a routerLink="/registerStudent">{{ 'login.signUp' | transloco }}</a>
+      </div>
+    </div>
+  </div>

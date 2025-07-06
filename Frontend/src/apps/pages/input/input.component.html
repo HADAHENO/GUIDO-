@@ -1,0 +1,48 @@
+<div class="input-container" [class.focused]="isFocused">
+  <!-- Textarea with proper accessibility attributes -->
+  <label for="chat-message-input" class="visually-hidden">
+    {{ 'chat.placeholder' | transloco }}
+  </label>
+  <textarea 
+    #textarea
+    id="chat-message-input"
+    [(ngModel)]="message"
+    (keydown)="onKeyDown($event)"
+    (focus)="isFocused = true"
+    (blur)="isFocused = false"
+    (input)="adjustHeight()"
+    [placeholder]="'chat.placeholder' | transloco"
+    [attr.aria-label]="'chat.placeholder' | transloco"
+    rows="1"
+    aria-describedby="chat-input-instructions"
+  ></textarea>
+  
+  <!-- Button with complete accessibility attributes -->
+  <button 
+    class="send-button" 
+    type="button"
+    (click)="onSend()" 
+    [disabled]="!message"
+    [attr.aria-label]="'chat.send' | transloco"
+    [title]="'chat.send' | transloco"
+    aria-labelledby="send-button-label"
+  >
+    <span id="send-button-label" class="visually-hidden">
+      {{ 'chat.send' | transloco }}
+    </span>
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+    </svg>
+  </button>
+  
+  <!-- Optional instructions for screen readers -->
+  <div id="chat-input-instructions" class="visually-hidden">
+    {{ 'chat.instructions' | transloco }}
+  </div>
+</div>

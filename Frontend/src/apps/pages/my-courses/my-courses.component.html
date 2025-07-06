@@ -1,0 +1,90 @@
+<div class="courses-page">
+    <app-student-header></app-student-header>
+  
+    <div class="navbar-spacer"></div>
+  
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>{{ 'myCourses.welcome' | transloco: { name: (student.firstName | titlecase) } }}</h1>
+          <p class="subtitle">{{ 'myCourses.subtitle' | transloco }}</p>
+          <div class="progress-summary">
+            <div class="progress-item">
+              <div class="progress-circle" >
+                <span>{{ generalHours }}/12</span>
+              </div>
+              <p>{{ 'myCourses.generalRequirements' | transloco }}</p>
+            </div>
+            <div class="progress-item">
+              <div class="progress-circle" >
+                <span>{{ facultyHours }}/72</span>
+              </div>
+              <p>{{ 'myCourses.facultyRequirements' | transloco }}</p>
+            </div>
+            <div class="progress-item">
+              <div class="progress-circle" >
+                <span>{{ departmentHours }}/60</span>
+              </div>
+              <p>{{ 'myCourses.divisionRequirements' | transloco }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+            <img 
+            src="assets/education-illustration.svg" 
+            alt="{{ 'myCourses.illustrationAlt' | transloco }}" 
+            title="{{ 'myCourses.illustrationAlt' | transloco }}"
+            class="card-image" 
+            loading="lazy" 
+          />
+        </div>
+      </div>
+    </section>
+  
+    <section class="dashboard-section">
+      <h2 class="section-title">{{ 'myCourses.dashboardTitle' | transloco }}</h2>
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features" 
+             (click)="!feature.disabled && navigateTo(feature.link)"
+             [class.disabled-card]="feature.disabled">
+          <div class="card-icon" *ngIf="feature.icon">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h3>{{ feature.name | transloco }}</h3>
+          <div class="card-content">
+            <ng-container *ngIf="feature.name === 'myCourses.generalRequirements'">
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width]="(generalHours/12)*100 + '%'"></div>
+              </div>
+              <p>{{ 'myCourses.hoursCompleted' | transloco: { completed: generalHours, total: 12 } }}</p>
+            </ng-container>
+            <ng-container *ngIf="feature.name === 'myCourses.facultyRequirements'">
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width]="(facultyHours/72)*100 + '%'"></div>
+              </div>
+              <p>{{ 'myCourses.hoursCompleted' | transloco: { completed: facultyHours, total: 72 } }}</p>
+            </ng-container>
+            <ng-container *ngIf="feature.name === 'myCourses.divisionRequirements'">
+              <div class="progress-bar">
+                <div class="progress-fill" [style.width]="(departmentHours/60)*100 + '%'"></div>
+              </div>
+              <p *ngIf="!feature.disabled">{{ 'myCourses.hoursCompleted' | transloco: { completed: departmentHours, total: 60 } }}</p>
+              <p *ngIf="feature.disabled" class="disabled-message">{{ 'myCourses.completeFacultyFirst' | transloco }}</p>
+            </ng-container>
+          </div>
+          <div class="card-action" *ngIf="!feature.disabled">
+            {{ 'myCourses.viewDetails' | transloco }} <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="card-action disabled-action" *ngIf="feature.disabled">
+            {{ 'myCourses.locked' | transloco }} <i class="fas fa-lock"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Language switcher (optional) -->
+    <!-- <div class="language-switcher">
+      <button (click)="changeLanguage('en')" [class.active]="getActiveLang() === 'en'">English</button>
+      <button (click)="changeLanguage('ar')" [class.active]="getActiveLang() === 'ar'">العربية</button>
+    </div> -->
+</div>

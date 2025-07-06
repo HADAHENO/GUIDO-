@@ -1,0 +1,210 @@
+<!-- <div class="bg-img" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <div class="overlay"></div>
+    <div class="cover-image">
+        <img src="assets/bg.jpg" alt="" role="presentation" class="full-cover">
+    </div>
+  
+    <div class="register-container">
+        <img src="assets/logo1.png" alt="" class="logo" routerLink="/" />
+  
+      
+  
+      <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+        <div class="form-group">
+          <label for="firstName" class="sr-only">{{ 'register.firstNameLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input 
+              type="text" 
+              id="firstName"
+              [placeholder]="'register.firstNamePlaceholder' | transloco"
+              [attr.aria-label]="'register.firstNameLabel' | transloco"
+              name="firstName" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="lastName" class="sr-only">{{ 'register.lastNameLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input 
+              type="text" 
+              id="lastName"
+              [placeholder]="'register.lastNamePlaceholder' | transloco"
+              [attr.aria-label]="'register.lastNameLabel' | transloco"
+              name="lastName" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email" class="sr-only">{{ 'register.emailLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-envelope"></span>
+            <input 
+              type="email" 
+              id="email"
+              [placeholder]="'register.emailPlaceholder' | transloco"
+              [attr.aria-label]="'register.emailLabel' | transloco"
+              name="email" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="password" class="sr-only">{{ 'register.passwordLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-lock"></span>
+            <input 
+              type="password" 
+              id="password"
+              [placeholder]="'register.passwordPlaceholder' | transloco"
+              [attr.aria-label]="'register.passwordLabel' | transloco"
+              name="password" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="confirmPassword" class="sr-only">{{ 'register.confirmPasswordLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-lock"></span>
+            <input 
+              type="password" 
+              id="confirmPassword"
+              [placeholder]="'register.confirmPasswordPlaceholder' | transloco"
+              [attr.aria-label]="'register.confirmPasswordLabel' | transloco"
+              name="confirmPassword" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <button type="submit" class="submit-btn">
+          {{ 'register.submitButton' | transloco }}
+        </button>
+      </form>
+  
+      <div class="login-link">
+        {{ 'register.haveAccount' | transloco }} 
+        <a routerLink="/login">{{ 'register.loginNow' | transloco }}</a>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="bg-img" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <div class="overlay"></div>
+    <div class="cover-image">
+        <img src="assets/bg.jpg" alt="" role="presentation" class="full-cover">
+    </div>
+  
+    <div class="register-container">
+        <img src="assets/logo1.png" alt="" class="logo" routerLink="/" />
+  
+      <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
+        <!-- First Name -->
+        <div class="form-group">
+          <label for="firstName" class="sr-only">{{ 'register.firstNameLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input 
+              type="text" 
+              id="firstName"
+              [placeholder]="'register.firstNamePlaceholder' | transloco"
+              [attr.aria-label]="'register.firstNameLabel' | transloco"
+              name="firstName" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="lastName" class="sr-only">{{ 'register.lastNameLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input 
+              type="text" 
+              id="lastName"
+              [placeholder]="'register.lastNamePlaceholder' | transloco"
+              [attr.aria-label]="'register.lastNameLabel' | transloco"
+              name="lastName" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="sr-only">{{ 'register.emailLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-envelope"></span>
+            <input 
+              type="email" 
+              id="email"
+              [placeholder]="'register.emailPlaceholder' | transloco"
+              [attr.aria-label]="'register.emailLabel' | transloco"
+              name="email" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password" class="sr-only">{{ 'register.passwordLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-lock"></span>
+            <input 
+              type="password" 
+              id="password"
+              [placeholder]="'register.passwordPlaceholder' | transloco"
+              [attr.aria-label]="'register.passwordLabel' | transloco"
+              name="password" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword" class="sr-only">{{ 'register.confirmPasswordLabel' | transloco }}</label>
+          <div class="field">
+            <span class="fa fa-lock"></span>
+            <input 
+              type="password" 
+              id="confirmPassword"
+              [placeholder]="'register.confirmPasswordPlaceholder' | transloco"
+              [attr.aria-label]="'register.confirmPasswordLabel' | transloco"
+              name="confirmPassword" 
+              ngModel 
+              required
+            >
+          </div>
+        </div>
+  
+        <button type="submit" class="submit-btn">
+          {{ 'register.submitButton' | transloco }}
+        </button>
+      </form>
+  
+      <div class="login-link">
+        {{ 'register.haveAccount' | transloco }} 
+        <a routerLink="/login">{{ 'register.loginNow' | transloco }}</a>
+      </div>
+    </div>
+</div>

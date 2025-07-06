@@ -1,0 +1,78 @@
+<div class="profile-container" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <app-student-header></app-student-header>
+  
+    <div class="navbar-spacer"></div>
+  
+    <div class="profile-content">
+      <div class="profile-header">
+        <h2>{{ student?.firstName }} {{ student?.lastName }}</h2>
+        <p>{{ student?.email }}</p>
+      </div>
+  
+      <div class="profile-details">
+        <div class="detail-item">
+          <label for="firstName">{{ 'profile.labels.firstName' | transloco }}</label>
+          <input 
+            type="text" 
+            id="firstName" 
+            [(ngModel)]="student.firstName" 
+            [placeholder]="'profile.placeholders.firstName' | transloco" 
+            disabled
+          />
+        </div>
+        <div class="detail-item">
+          <label for="lastName">{{ 'profile.labels.lastName' | transloco }}</label>
+          <input 
+            type="text" 
+            id="lastName" 
+            [(ngModel)]="student.lastName" 
+            [placeholder]="'profile.placeholders.lastName' | transloco" 
+            disabled
+          />
+        </div>
+        <div class="detail-item">
+          <label for="email">{{ 'profile.labels.email' | transloco }}</label>
+          <input 
+            type="email" 
+            id="email" 
+            [(ngModel)]="student.email" 
+            [placeholder]="'profile.placeholders.email' | transloco" 
+            disabled
+          />
+        </div>
+        <div class="detail-item">
+          <label for="password">{{ 'profile.labels.newPassword' | transloco }}</label>
+          <input 
+            type="password" 
+            id="password" 
+            [(ngModel)]="newPassword" 
+            [placeholder]="'profile.placeholders.newPassword' | transloco" 
+          />
+        </div>
+        <div class="detail-item">
+          <label for="confirmPassword">{{ 'profile.labels.confirmPassword' | transloco }}</label>
+          <input 
+            type="password" 
+            id="confirmPassword" 
+            [(ngModel)]="confirmPassword" 
+            [placeholder]="'profile.placeholders.confirmPassword' | transloco" 
+          />
+        </div>
+      </div>
+  
+      <div class="profile-actions">
+        <button 
+          (click)="updatePassword()" 
+          [disabled]="isUpdating || !newPassword || !confirmPassword || newPassword !== confirmPassword"
+          class="update-btn"
+        >
+          <span *ngIf="!isUpdating">{{ 'profile.buttons.updatePassword' | transloco }}</span>
+          <span *ngIf="isUpdating">
+            <i class="fas fa-spinner fa-spin"></i> {{ 'profile.buttons.updating' | transloco }}
+          </span>
+        </button>
+      </div>
+  
+     
+    </div>
+  </div>

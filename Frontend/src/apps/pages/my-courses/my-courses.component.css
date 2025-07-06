@@ -1,0 +1,347 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+  }
+  
+  /* Layout */
+  .courses-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-spacer {
+    height: 80px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    color: white;
+    padding: 60px 5%;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+  
+  .progress-summary {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .progress-item {
+    text-align: center;
+  }
+  
+  /* Updated Progress Circle Styles */
+  .progress-circle {
+    --percentage: 0;
+    --progress-color: #32CD32;
+    --bg-color: #f0f8ff;
+    
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: conic-gradient(var(--progress-color) calc(var(--percentage) * 1%), var(--bg-color) 0);
+  }
+  
+  .progress-circle::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .progress-circle span {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #212529;
+  }
+  
+  .progress-item p {
+    font-weight: 500;
+  }
+  
+  /* Dashboard Section - Desktop Enhancement */
+  .dashboard-section {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 15px auto 0;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 30px;
+    align-items: stretch; /* Make cards equal height */
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure cards take full height */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(67, 97, 238, 0.2); 
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    background: #f0f8ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #4361ee;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover .card-icon {
+    background: #32CD32;
+    color: white;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #212529;
+    font-weight: 600;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #4361ee;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+  }
+  
+  .card-content {
+    flex-grow: 1; /* Push action to bottom */
+    margin-bottom: 20px;
+  }
+  
+  .card-content p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .card-action {
+    margin-top: auto; /* Push to bottom of card */
+    color: #4361ee;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .feature-card:hover .card-action {
+    color: #3a0ca3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablet */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .progress-summary {
+      justify-content: center;
+    }
+  
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .section-title {
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .features-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 40px 5%;
+    }
+  
+    .progress-summary {
+      gap: 20px;
+    }
+  
+    .progress-circle {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .progress-circle::before {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* Add these styles to your CSS file */
+  .disabled-card {
+    opacity: 0.7;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    background-color: #f8f9fa;
+    border: 1px dashed #dee2e6;
+  }
+  
+  .disabled-card .card-icon {
+    background-color: #e9ecef !important;
+    color: #6c757d !important;
+  }
+  
+  .disabled-card h3 {
+    color: #6c757d !important;
+  }
+  
+  .disabled-message {
+    color: #dc3545 !important;
+    font-weight: 500;
+  }
+  
+  .disabled-action {
+    color: #6c757d !important;
+  }
+  
+  .disabled-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .language-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .language-switcher button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #e9ecef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .language-switcher button:hover {
+    background: #dee2e6;
+  }
+  
+  .language-switcher button.active {
+    background: #4361ee;
+    color: white;
+  }
+
+  

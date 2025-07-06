@@ -1,0 +1,146 @@
+<div class="department-page">
+    <div *ngIf="isModalVisible" class="modal">
+      <div class="modal-content">
+        <h2>{{ 'department.selectDepartment' | transloco }}</h2>
+        <label for="department-select">{{ 'department.departmentLabel' | transloco }}:</label>
+        <select id="department-select" [(ngModel)]="selectedDepartment">
+          <option value="" disabled>{{ 'department.selectPlaceholder' | transloco }}</option>
+          <option value="CS">{{ 'department.csOption' | transloco }}</option>
+          <option value="IS">{{ 'department.isOption' | transloco }}</option>
+          <option value="AI">{{ 'department.aiOption' | transloco }}</option>
+          <option value="IT">{{ 'department.itOption' | transloco }}</option>
+        </select>
+        <div class="modal-footer">
+          <button (click)="closeModal()">{{ 'common.confirm' | transloco }}</button>
+        </div>
+      </div>
+    </div>
+
+    <app-student-header></app-student-header>
+
+    <div *ngIf="selectedDepartment && !isModalVisible" class="course-manager">
+      <div class="tables-container">
+        <div class="table-container">
+          <h3 class="table-title">{{ 'department.compulsorySubjects' | transloco }} (63 {{ 'common.hours' | transloco }})</h3>
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>{{ 'common.code' | transloco }}</th>
+                <th>{{ 'common.courseName' | transloco }}</th>
+                <th>{{ 'common.hours' | transloco }}</th>
+                <th>{{ 'common.prerequest' | transloco }}</th>
+                <th>{{ 'common.grade' | transloco }}</th>
+                <th>{{ 'common.action' | transloco }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let course of coreCourses" [class.disabled]="!canTakeCourse(course)">
+                <td>{{ course.code }}</td>
+                <td>
+                    <ng-container *ngIf="currentLang === 'en'">{{ course.course_Name_en }}</ng-container>
+                    <ng-container *ngIf="currentLang === 'ar'">{{ course.course_Name_ar }}</ng-container>
+                </td>
+                <td>{{ course.hours }}</td>
+                <td>
+                    <ng-container *ngIf="currentLang === 'en'">{{ course.prerequest_en || ('common.none' | transloco) }}</ng-container>
+                    <ng-container *ngIf="currentLang === 'ar'">{{ course.prerequest_ar || ('common.none' | transloco) }}</ng-container>
+                </td>
+                <td>
+                    <select
+                    [(ngModel)]="course.grade"
+                    [disabled]="!canTakeCourse(course) || !showAddButtonMap[course.code]"
+                    title="Select grade for {{ course.course_Name_en }}"
+                  >
+                    <option value="none">{{ 'common.none' | transloco }}</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                  </select>
+                </td>
+                <td>
+                  <button
+                    *ngIf="showAddButtonMap[course.code]"
+                    class="add-button"
+                    (click)="addCourse(course)"
+                    [disabled]="!canTakeCourse(course) || course.grade === 'none'"
+                  >
+                    {{ 'common.add' | transloco }}
+                  </button>
+                  <span *ngIf="!showAddButtonMap[course.code]">{{ 'common.added' | transloco }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-container">
+          <h3 class="table-title">{{ 'department.electiveSubjects' | transloco }} (9 {{ 'common.hours' | transloco }})</h3>
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>{{ 'common.code' | transloco }}</th>
+                <th>{{ 'common.courseName' | transloco }}</th>
+                <th>{{ 'common.hours' | transloco }}</th>
+                <th>{{ 'common.prerequest' | transloco }}</th>
+                <th>{{ 'common.grade' | transloco }}</th>
+                <th>{{ 'common.action' | transloco }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let course of electiveCourses" [class.disabled]="!canTakeCourse(course)">
+                <td>{{ course.code }}</td>
+                <td>
+                    <ng-container *ngIf="currentLang === 'en'">{{ course.course_Name_en }}</ng-container>
+                    <ng-container *ngIf="currentLang === 'ar'">{{ course.course_Name_ar }}</ng-container>
+                </td>
+                <td>{{ course.hours }}</td>
+                <td>
+                    <ng-container *ngIf="currentLang === 'en'">{{ course.prerequest_en || ('common.none' | transloco) }}</ng-container>
+                    <ng-container *ngIf="currentLang === 'ar'">{{ course.prerequest_ar || ('common.none' | transloco) }}</ng-container>
+                </td>
+                <td>
+                    <select
+                    [(ngModel)]="course.grade"
+                    [disabled]="!canTakeCourse(course) || !showAddButtonMap[course.code]"
+                    title="Select grade for {{ course.course_Name_en }}"
+                  >
+                    <option value="none">{{ 'common.none' | transloco }}</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                  </select>
+                </td>
+                <td>
+                  <button
+                    *ngIf="showAddButtonMap[course.code]"
+                    class="add-button"
+                    (click)="addCourse(course)"
+                    [disabled]="!canTakeCourse(course) || course.grade === 'none'"
+                  >
+                    {{ 'common.add' | transloco }}
+                  </button>
+                  <span *ngIf="!showAddButtonMap[course.code]">{{ 'common.added' | transloco }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="summary">
+        <p class="total-hours">{{ 'department.totalHours' | transloco }}: {{ calculateDepartmentHours() }} / 72</p>
+      </div>
+    </div>
+</div>

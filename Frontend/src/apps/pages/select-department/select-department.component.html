@@ -1,0 +1,20 @@
+<div class="select-department-page">
+    <app-student-header></app-student-header>
+    
+    <div class="department-selection-container">
+        <div class="modal-content">
+            <h2>{{ 'department.selectDepartment' | transloco }}</h2>
+            <label for="department-select">{{ 'department.departmentLabel' | transloco }}:</label>
+            <select id="department-select" [(ngModel)]="selectedDepartment" class="form-select">
+                <option value="" disabled>{{ 'department.selectPlaceholder' | transloco }}</option>
+                <option value="CS">{{ 'department.csOption' | transloco }}</option>
+                <option value="IS">{{ 'department.isOption' | transloco }}</option>
+                <option value="AI">{{ 'department.aiOption' | transloco }}</option>
+                <option value="IT">{{ 'department.itOption' | transloco }}</option>
+            </select>
+            <div class="modal-footer">
+                <button class="btn btn-primary" (click)="confirmDepartment()">{{ 'common.confirm' | transloco }}</button>
+            </div>
+        </div>
+    </div>
+</div>

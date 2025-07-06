@@ -1,0 +1,28 @@
+<!-- message.component.html -->
+<div class="message" [class.user]="message.sender === 'user'" [class.bot]="message.sender === 'bot'">
+  <div class="avatar">
+    <img [src]="message.sender === 'user' ? 'assets/user-avatar.png' : 'assets/bot-avatar.png'" 
+         alt="{{ message.sender === 'user' ? ('chat.user' | transloco) : ('chat.bot' | transloco) }}">
+  </div>
+  
+  <div class="content">
+    <div class="header">
+      <span class="sender">{{ (message.sender === 'user' ? 'chat.you' : 'chat.assistant') | transloco }}</span>
+      <span class="timestamp">{{ message.timestamp | date:'shortTime' }}</span>
+    </div>
+    
+    <div class="text" [innerHTML]="message.content | markdown"></div>
+    
+    <div class="status" *ngIf="message.status === 'sending'">
+      <div class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    
+    <div class="error" *ngIf="message.status === 'failed'">
+      {{ 'chat.error' | transloco }}
+    </div>
+  </div>
+</div>
